@@ -63,7 +63,7 @@ namespace DesafioPOO.Models
             if (Regex.IsMatch(numero, numeroRegex)) return true;
             else
             {
-                throw new Exception("O Número inserido é inválido. Não foi possível cadastrar o celular.");
+                throw new Exception("\nO Número inserido é inválido. Não foi possível cadastrar o celular.");
             }
         }
 
@@ -71,7 +71,7 @@ namespace DesafioPOO.Models
             string imeiRegex = @"^\d{15}$|^\d{2}[- ]?\d{6}[- ]?\d{6}[- ]?\d{1}$";
 
             if(Regex.IsMatch(imei,imeiRegex)) return true;
-            else throw new Exception("O IMEI inserido é inválido. Não foi possível cadastrar o celular.\nA numeração IMEI contém 15 dígitos.");
+            else throw new Exception("\nO IMEI inserido é inválido. Não foi possível cadastrar o celular.\nA numeração IMEI contém 15 dígitos.");
         }
 
         // Override método toString para filhos
